@@ -366,12 +366,12 @@ try{
 					        "\n\n\t Facebook : " +adminboothevent.getFacebook() +
 					        "\n\n\t Twitter : " +adminboothevent.getTwitter()  ;*/
 		   	String mailerHostAddress=adminboothevent.getEventHostMailerId();
-			/*
-			 * mailUtil.sendEmailUploadMail(adminboothevent.getSponsorName()+"("+
-			 * mailerHostAddress+")"+" <dev@iamuse.com>",uploadImageWithEmailRequestVO.
-			 * getEmailId().trim(),path,"Your Picture Is Ready","IAMUSE.jpg",url,imageName,
-			 * true,testText);
-			 */
+			
+			 mailUtil.sendEmailUploadMail(adminboothevent.getSponsorName()+"("+
+			 mailerHostAddress+")"+" <dev@iamuse.com>",uploadImageWithEmailRequestVO.
+			 getEmailId().trim(),path,"Your Picture Is Ready","IAMUSE.jpg",url,imageName,
+			 true,testText);
+			 
 		    userDao.updateEmailSendTime(imageName,userId);
 		    userDao.updateStatusCount(uploadImageWithEmailRequestVO.getEmailId().trim(),eventId,Integer.parseInt(uploadImageWithEmailRequestVO.getUserId()));
 		    
